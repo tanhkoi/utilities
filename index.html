@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replace Characters</title>
+</head>
+<body>
+    <textarea id="input" rows="10" cols="50" placeholder="Enter text..."></textarea>
+    <br>
+    <button onclick="replaceCharacters()">Replace</button>
+    <br>
+    <textarea id="output" rows="10" cols="50" placeholder="Result..."></textarea>
+
+    <script>
+        function replaceCharacters() {
+            const input = document.getElementById("input").value;
+
+            const output = input
+                .replace(/\(/g, "[")
+                .replace(/\)/g, "] ");
+
+            document.getElementById("output").value = output;
+        }
+    </script>
+</body>
+</html>
